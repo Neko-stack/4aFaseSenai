@@ -1,0 +1,38 @@
+{
+  "name": "faxina-backend",
+  "version": "1.0.0",
+  "description": "Backend with Node, Typescript and Prisma. For students with medical clinic context;",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsx --watch src/index.ts",
+    "build": "tsc --noEmit",
+    "test": "echo \"Testes de integração dependem de PostgreSQL configurado.\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@prisma/adapter-pg": "^7.4.2",
+    "@prisma/client": "^7.4.2",
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "pg": "^8.20.0",
+    "tsx": "^4.21.0"
+  },
+  "devDependencies": {
+    "@prisma/config": "^7.8.0",
+    "@types/bcrypt": "^6.0.0",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^25.3.4",
+    "@types/pg": "^8.18.0",
+    "prisma": "^7.4.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}

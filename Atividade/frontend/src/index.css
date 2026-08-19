@@ -1,0 +1,189 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+.dark body,
+.dark #root {
+  background: #000;
+  color: #fff;
+}
+
+.dark .bg-white,
+.dark .bg-gray-50,
+.dark .bg-gray-100 {
+  background-color: #0f172a !important;
+}
+
+.dark .bg-white,
+.dark .bg-gray-50,
+.dark .bg-gray-100,
+.dark .bg-gray-800,
+.dark .bg-gray-900 {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.dark .bg-gray-800,
+.dark .bg-gray-900 {
+  background-color: #000 !important;
+}
+
+.dark .text-gray-100,
+.dark .text-gray-200,
+.dark .text-gray-300,
+.dark .text-gray-500,
+.dark .text-gray-600,
+.dark .text-gray-700,
+.dark .text-gray-800,
+.dark .text-cyan-300,
+.dark .text-cyan-700,
+.dark .text-cyan-800 {
+  color: #fff !important;
+}
+
+.dark .border,
+.dark .border-gray-100,
+.dark .border-gray-200,
+.dark .border-cyan-700,
+.dark .divide-gray-200 > :not(:last-child) {
+  border-color: #fff !important;
+}
+
+.dark input,
+.dark textarea,
+.dark select {
+  background-color: #020617;
+  border-color: rgba(255, 255, 255, 0.45);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(255, 255, 255, 0.04);
+  color: #fff;
+}
+
+.dark input:focus,
+.dark textarea:focus,
+.dark select:focus {
+  border-color: #67e8f9 !important;
+  box-shadow: 0 0 0 2px rgba(103, 232, 249, 0.35), inset 0 1px 2px rgba(0, 0, 0, 0.75);
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: #d1d5db;
+}
+
+.dark option {
+  background-color: #000;
+  color: #fff;
+}
+
+.modal-panel {
+  background-color: #fff;
+  border: 2px solid #0e7490;
+  border-radius: 0.75rem;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+  color: #111827;
+}
+
+.dark button.bg-gray-200 {
+  background-color: #000 !important;
+  border: 1px solid #fff;
+  color: #fff !important;
+}
+
+.dark button.bg-gray-200:hover {
+  background-color: #111827 !important;
+}
+
+.dark .modal-panel {
+  background-color: #111827 !important;
+  border-color: #67e8f9 !important;
+  box-shadow: 0 0 0 3px #fff, 0 0 36px rgba(103, 232, 249, 0.9), 0 24px 70px rgba(0, 0, 0, 0.9) !important;
+  color: #fff !important;
+}
+
+.dark .modal-panel .bg-white {
+  background-color: transparent !important;
+}
+
+.dark .modal-panel h1,
+.dark .modal-panel h2,
+.dark .modal-panel h3,
+.dark .modal-panel p,
+.dark .modal-panel label,
+.dark .modal-panel span {
+  color: #fff !important;
+}
+
+.dark .login-page,
+.dark .login-page .bg-gray-100 {
+  background-color: #f3f4f6 !important;
+  color: #111827 !important;
+}
+
+.dark .login-page .bg-gray-200 {
+  background-color: #e5e7eb !important;
+}
+
+.dark .login-page .bg-white,
+.dark .login-page .modal-panel,
+.dark .login-page .modal-panel .bg-white {
+  background-color: #fff !important;
+  color: #111827 !important;
+}
+
+.dark .login-page h1,
+.dark .login-page h2,
+.dark .login-page h3,
+.dark .login-page p,
+.dark .login-page label,
+.dark .login-page span {
+  color: #111827 !important;
+}
+
+.dark .login-page input,
+.dark .login-page textarea,
+.dark .login-page select {
+  background-color: #fff !important;
+  border-color: #d1d5db !important;
+  color: #111827 !important;
+}
+
+.dark .login-page input::placeholder,
+.dark .login-page textarea::placeholder {
+  color: #6b7280 !important;
+}
+
+.dark .login-page .modal-panel {
+  border-color: #0e7490 !important;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35) !important;
+}
+
+.dark .hover\:bg-gray-50:hover,
+.dark .hover\:bg-gray-100:hover,
+.dark .hover\:bg-gray-300:hover,
+.dark .hover\:bg-gray-400:hover {
+  background-color: #111827 !important;
+  color: #fff !important;
+}
+
+.exams-table th,
+.exams-table td {
+  padding: 0.5rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.exams-table th:nth-child(5),
+.exams-table td:nth-child(5) {
+  text-align: right;
+}
+
+.exams-table td:nth-child(2),
+.exams-table td:nth-child(3),
+.exams-table td:nth-child(6) {
+  overflow-wrap: anywhere;
+}
+
+.exams-table td:nth-child(4),
+.exams-table td:nth-child(5) {
+  white-space: nowrap;
+}

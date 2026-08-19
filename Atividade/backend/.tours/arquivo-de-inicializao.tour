@@ -1,0 +1,42 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "Arquivo de inicialização e prisma",
+  "steps": [
+    {
+      "file": "src/index.ts",
+      "description": "Aplicativo express, inicialização do express\r\n",
+      "line": 3
+    },
+    {
+      "file": "src/index.ts",
+      "description": "Criação de rotas get\r\n",
+      "line": 7
+    },
+    {
+      "file": "src/index.ts",
+      "description": "Colocando a api para rodar e escutar a porta",
+      "line": 13
+    },
+    {
+      "file": "prisma/schema.prisma",
+      "description": "Tipo do banco(\"postgresql\", \"mysql\")",
+      "line": 12
+    },
+    {
+      "file": "prisma/schema.prisma",
+      "description": "Tabela usuario no nosso banco de dados",
+      "line": 16
+    },
+    {
+      "file": "prisma/schema.prisma",
+      "description": "Tabela exame no nosso banco de dados",
+      "line": 24
+    },
+    {
+      "file": "prisma/schema.prisma",
+      "description": "mapeamento do nome para que a tabela no banco tenha o nome padrao em minusculo, invés de utilizar o maiúsculo",
+      "line": 21
+    }
+  ],
+  "ref": "db0129f0794bc976e8697f4fb7b37d73e058bf1a"
+}

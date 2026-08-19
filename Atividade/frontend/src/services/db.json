@@ -1,0 +1,63 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "email": "joao@email.com",
+      "senha": "abcd1234"
+    },
+    {
+      "id": "2",
+      "email": "luciano@gmail.com",
+      "senha": "abcd1234"
+    }
+  ],
+  "pacientes": [
+    {
+      "id": "1",
+      "nome": "Joao da Silva",
+      "cpf": "958.858.858-88",
+      "telefone": "(48) 98584-9652",
+      "email": "joao@email.com",
+      "data_nascimento": "1980-12-11",
+      "sexo": "masculino",
+      "convenio": "Unimed",
+      "alergias": "Dipirona",
+      "observacoes": "Paciente prefere contato por telefone.",
+      "responsavel": null
+    },
+    {
+      "id": "2",
+      "nome": "Maria da Silva",
+      "cpf": "958.858.858-88",
+      "telefone": "(48) 98584-9652",
+      "email": "maria@email.com",
+      "data_nascimento": "1980-12-11",
+      "sexo": "feminino",
+      "convenio": "Particular",
+      "alergias": "Nenhuma",
+      "observacoes": "Sem observacoes adicionais.",
+      "responsavel": null
+    }
+  ],
+  "consultas": [
+    {
+      "id": "1",
+      "motivo": "Resfriado",
+      "data_consulta": "2026-03-20T15:30",
+      "observacoes": "Paciente com sintomas gripais.",
+      "medico_responsavel_id": 1,
+      "paciente_id": 2
+    }
+  ],
+  "exames": [
+    {
+      "id": "1",
+      "tipo_exame": "Hemograma",
+      "valor": 80,
+      "descricao": "Exame laboratorial de sangue.",
+      "resultado": "Resultado dentro dos parametros esperados.",
+      "data_exame": "2026-07-12T15:20"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
