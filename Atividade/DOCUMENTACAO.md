@@ -18,39 +18,23 @@ O Brilho & Ordem foi feito para ajudar no controle de faxinas residenciais e com
 | RF08 | O painel deve avisar quando existir serviço marcado para as próximas 24 horas. |
 | RF09 | As ações de criar, editar e cancelar devem ficar registradas no histórico. |
 
-## Banco de dados
 
-O banco usado é o `faxina_db`, em PostgreSQL. As tabelas são `usuario`, `cliente`, `profissional`, `agendamento` e `historico_agendamento`.
-
-O arquivo `database/faxina_db.sql` cria as tabelas e adiciona três registros iniciais em cada uma delas.
-
-```text
-Cliente       1 --- N Agendamento N --- 1 Profissional
-                         |
-                         N
-                         |
-                         1
-               Histórico de agendamento
-                         |
-                         N
-                         |
-                         1
-                      Usuário
-```
 
 ## Telas do sistema
 
-**Login e cadastro:** a tela inicial possui as opções Entrar e Cadastrar. O cadastro pede nome, e-mail, senha e confirmação de senha. Caso o login falhe, a mensagem aparece na própria tela.
+Login e cadastro: a tela inicial possui as opções Entrar e Cadastrar. O cadastro pede nome, e-mail, senha e confirmação de senha. Caso o login falhe, a mensagem aparece na própria tela.
 
-**Painel principal:** mostra a quantidade de agendamentos, clientes e profissionais cadastrados. Também apresenta um aviso quando há serviço nas próximas 24 horas.
+Painel principal: mostra a quantidade de agendamentos, clientes e profissionais cadastrados. Também apresenta um aviso quando há serviço nas próximas 24 horas.
 
-**Cadastro de agendamento:** o usuário informa cliente, profissional, tipo de serviço, data, horário, duração, endereço, necessidades e status.
+Cadastro de agendamento: o usuário informa cliente, profissional, tipo de serviço, data, horário, duração, endereço, necessidades e status.
 
-**Gestão de agendamentos:** exibe a lista de serviços, permite buscar por cliente, profissional ou tipo de serviço, editar os dados e cancelar um agendamento. A agenda cronológica aparece na mesma tela.
+Gestão de agendamentos: exibe a lista de serviços, permite buscar por cliente, profissional ou tipo de serviço, editar os dados e cancelar um agendamento. A agenda cronológica aparece na mesma tela.
 
 ## Validações
 
 Antes de salvar um agendamento, o sistema verifica se os campos obrigatórios foram preenchidos. Também confere se o profissional trabalha naquele horário e se já existe outro serviço que ocupa o mesmo período. Se houver problema, o agendamento não é salvo e uma mensagem é exibida.
+
+
 
 ## Testes realizados
 
@@ -64,6 +48,8 @@ Antes de salvar um agendamento, o sistema verifica se os campos obrigatórios fo
 | Alerta de proximidade | Mostrar aviso para serviços nas próximas 24 horas. |
 | Histórico | Registrar criação, alteração e cancelamento no banco. |
 
+
+
 ## Tecnologias usadas
 
 - Windows 11;
@@ -72,10 +58,6 @@ Antes de salvar um agendamento, o sistema verifica se os campos obrigatórios fo
 - TypeScript, Express e Prisma 7 no backend;
 - PostgreSQL 16 ou superior no banco de dados.
 
-## Como executar
 
-1. Instale e inicie o PostgreSQL.
-2. Execute `database/faxina_db.sql` para criar o banco e os dados iniciais.
-3. Configure `backend/.env` com a sua senha do PostgreSQL.
-4. No terminal, execute `npm install` e `npm start` dentro da pasta `backend`.
-5. Em outro terminal, execute `npm install` e `npm run dev` dentro da pasta `frontend`.
+
+
