@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Busca de Produtos</title>
+</head>
+<body>
+
+    <h1>Busca de Produtos</h1>
+
+    <input
+        type="text"
+        id="busca"
+        placeholder="Digite um produto"
+    >
+
+    <button onclick="buscar()">
+        Buscar
+    </button>
+
+    <hr>
+
+    <div id="resultado"></div>
+
+    <script>
+        function buscar() {
+            const termo = document.getElementById("busca").value;
+        // o innerHTML permite que tags HTML ou códigos JavaScript sejam interpretados pelo navegador.
+
+/*            document.getElementById("resultado").innerHTML =
+                "Você pesquisou por: " + termo;
+        }
+*/
+        //Corrigido
+        document.getElementById("resultado").textContent =
+                "Você pesquisou por: " + termo;
+        }
+    </script>
+
+</body>
+</html>

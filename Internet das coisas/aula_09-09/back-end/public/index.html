@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Comentários</title>
+</head>
+
+<body>
+
+    <h1>Comentários</h1>
+
+    <textarea id="comentario" placeholder="Digite seu comentário"></textarea>
+
+    <br><br>
+
+    <button onclick="salvar()">
+        Publicar comentário
+    </button>
+
+    <hr>
+
+    <h2>Comentários publicados</h2>
+
+    <div id="lista"></div>
+
+    <script>
+
+        async function salvar() {
+
+            // ".trim" para nao aceitar apenas espaços
+                const comentario =
+                document.getElementById("comentario").value.trim;
+
+            //nao possuia validação para comentarios vazios 
+            if (comentario === "") {
+                alert("Digite um comentário antes de publicar.");
+                return;
+            }
+
+            await fetch("/comentarios", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    comentario
+                })
+            });
+
+            document.getElementById("comentario").value = "";
+
+            carregar();
+        }
+
+
+        async function carregar() {
+
+            const resposta =
+                await fetch("/comentarios");
+
+            const comentarios =
+                await resposta.json();
+
+            const lista =
+                document.getElementById("lista");
+
+            lista.innerHTML = "";
+
+            comentarios.forEach(comentario => {
+
+                /*o comentario está sendo colocado diretamente com innerHTML permitindo codigos HTML e JS ser interpretado pelo navegador*/
+
+                /*lista.innerHTML += `
+                    <p>${comentario}</p>
+                `;*/
+
+                //Corrigido
+                const p = document.createElement("p");
+
+                p.textContent = comentario;
+
+                lista.appendChild(p);
+            });
+        }
+
+        carregar();
+
+    </script>
+
+</body>
+
+</html>
